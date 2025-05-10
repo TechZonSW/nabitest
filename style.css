@@ -1,0 +1,203 @@
+/* Grundläggande återställning och globala stilar */
+body {
+    font-family: 'Roboto', sans-serif; /* Liknar Apples font */
+    margin: 0;
+    background-color: #f5f5f7; /* Ljusgrå bakgrund som Apple ofta använder */
+    color: #1d1d1f; /* Mörkgrå textfärg */
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2 {
+    color: #000;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 400;
+    margin-top: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d2d2d7;
+}
+
+a {
+    color: #007aff; /* Apples klassiska blå länkfärg */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent vit */
+    backdrop-filter: blur(10px); /* suddig bakgrund, typiskt Apple */
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 0;
+    border-bottom: 1px solid #d2d2d7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Padding inuti header-containern */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header nav a {
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* Hero Sektion */
+#hero {
+    background-color: #e3e3e3; /* Lite mörkare än body för kontrast */
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+}
+
+#hero h2 {
+    font-size: 2.8em;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    border-bottom: none;
+}
+
+#hero p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+
+/* Produktgrid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivt grid */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 18px; /* Rundade hörn */
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.product-card img {
+    max-width: 80%;
+    height: 200px; /* Fasta höjden för konsekvent utseende */
+    object-fit: contain; /* Behåller bildproportioner */
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.4em;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.product-card .price {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Knappar */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: #007aff; /* Apple blå */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #005ecb;
+    text-decoration: none;
+}
+.btn-primary:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Varukorg */
+#cart-section h2 {
+    margin-top: 60px;
+}
+
+#cart-items {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 18px;
+    margin-bottom: 20px;
+    min-height: 50px;
+}
+#cart-items p {
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+#cart-items p:last-child {
+    border-bottom: none;
+}
+
+#cart-total {
+    text-align: right;
+    font-size: 1.3em;
+    font-weight: 500;
+}
+#cart-total p {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    background-color: #e3e3e3;
+    color: #555;
+    font-size: 0.9em;
+}
+footer .container {
+    padding: 0 20px;
+}
