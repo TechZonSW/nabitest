@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iButiken - Din Apple Expert</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>iButiken</h1>
+            <nav>
+                <a href="#products">Produkter</a>
+                <a href="#cart-section">Varukorg (<span id="cart-count">0</span>)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h2>Välkommen till framtiden.</h2>
+                <p>Upptäck de senaste Apple-produkterna här.</p>
+            </div>
+        </section>
+
+        <section id="products" class="container">
+            <h2>Populära Produkter</h2>
+            <div class="product-grid">
+                <!-- Produkter kommer att läggas till här av JavaScript -->
+            </div>
+        </section>
+
+        <section id="cart-section" class="container">
+            <h2>Din Varukorg</h2>
+            <div id="cart-items">
+                <p>Varukorgen är tom.</p>
+                <!-- Varukorgens innehåll kommer att läggas till här av JavaScript -->
+            </div>
+            <div id="cart-total">
+                <p>Totalt: <span id="total-price">0</span> kr</p>
+                <button id="checkout-btn" class="btn btn-primary" disabled>Till Kassan</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 iButiken. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
